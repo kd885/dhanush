@@ -1,0 +1,16 @@
+.bxc{
+    border: 1px solid #d3d3d3;
+}
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5e5e5e;
+}
+
+
+.p5{
+    padding: 50px;
+    @media screen and (max-width: 575px) {
+        padding: 20px 15px;
+    }
+}

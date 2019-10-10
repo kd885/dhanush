@@ -1,0 +1,40 @@
+.logo{
+    
+        width: 180px;
+
+   
+    img{
+        width: 100%;
+    }
+}
+button.navbar-toggler {
+    border: none;
+    width: 63px;
+}
+
+  header.fixed{
+    position: fixed;
+    animation: fromTop 0.6s ease both;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow:0 0 10px #00000020;
+    z-index: 100;
+  }
+  @keyframes fromTop{
+    from{
+      transform:translateY(-100%);
+    }
+  }
+ 
+
+  @media screen and (max-width: 991px) {
+  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link {
+  color:#fff;
+}
+  }
