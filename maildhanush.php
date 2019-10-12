@@ -10,6 +10,7 @@ if($_POST){
     $requirements = $_POST['requirements'];
     $message = "The customer has sent the following details: \r\n"
     ."Name : ".$name
+    ."\r\nEmail : ".$email    
     ."\r\nCountry : ".$country
     ."\r\nPhone Number : ".$phone
     ."\r\nAddress : ".$address
@@ -24,7 +25,7 @@ if($_POST){
     ."\r\nInterested Product : ".$interested
     ."\r\nRequirements : ".$requirements;
 
-    mail("sidrohra5@gmail.com", "This is an email from:" .$email.' with name '.$name, $message);
+    mail("kamaldeepsaini51@gmail.com", "This is an email from:" .$email.' with name '.$name, $message);
     mail($email, "Greetings from Dhanush International", "We have successfully received your details as following and will get back to you shortly!\r\n".$messageCustomer);
 }
 ?>
