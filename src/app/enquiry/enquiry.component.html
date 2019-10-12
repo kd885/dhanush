@@ -15,27 +15,27 @@
         <div class="container">
            
             <div class="col-sm-10 col-12 bxc p5 m-auto">
-                    <form >
+                    <form (submit)="sendMail($event)">
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="name">Name *</label>
-                                <input type="text" class="form-control" id="name"  placeholder="Enter Your Name" required> 
+                                <input type="text" class="form-control" id="name" [(ngModel)]="formData.name" name="name"  placeholder="Enter Your Name" required> 
                              </div>
                             <div class="form-group col-sm-6">
                               <label for="email">Your E-Mail *</label>
-                              <input type="email" class="form-control" id="email"  placeholder="Enter Your Email" required> 
+                              <input type="email" class="form-control" id="email" [(ngModel)]="formData.email" name="email"  placeholder="Enter Your Email" required> 
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="phone">Your Phone*  :(including area code)</label>
-                              <input type="number" class="form-control" id="phone" placeholder="Enter Your Phone Number" required>
+                              <input type="number" [(ngModel)]="formData.phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
                             </div>
                             <div class="form-group col-sm-6">
                                     <label for="address">Address:</label>
-                                    <input type="text" class="form-control" id="address"  placeholder="Enter Your Address" > 
+                                    <input type="text" class="form-control" id="address" name="address" [(ngModel)]="formData.address"  placeholder="Enter Your Address" > 
                                  </div>
                                  <div class="form-group col-sm-6">
                                         <label for="s1">Interested Product</label>
-                                        <select class="form-control" id="s1">
+                                        <select class="form-control" id="s1" [(ngModel)]="formData.interested" name="intrstd">
                                                 
                                                        
                                                         <option value="Throws">Throws
@@ -54,8 +54,8 @@
                                         </select>
                                       </div>
                                       <div class="form-group col-sm-6">
-                                            <label for="s2">Example select</label>
-                                            <select class="form-control" id="s2">                                                   
+                                            <label for="s2">Select Country</label>
+                                            <select class="form-control" id="s2" [(ngModel)]="formData.country" name="country">                                                   
                                                             <option value="Afganistan">Afganistan</option>
                                                             <option value="Albania">Albania</option>
                                                             <option value="Algeria">Algeria</option>
@@ -284,9 +284,16 @@
                                           </div>
                                  <div class="form-group col-sm-12">
                                         <label for="describe">Describe Your Requirements*</label>
-                                        <textarea class="form-control " id="describe" placeholder="Your Requirements" required></textarea>                                         
+                                        <textarea class="form-control " name="requirements" [(ngModel)]="formData.requirements" id="describe" placeholder="Your Requirements" required></textarea>                                         
                                      </div>
-                            
+                                     <div class="col-sm-12 form-group" *ngIf="formSent">
+                                      <div class="alert alert-success" role="alert">
+                                        <h4 class="alert-heading">Thank you!</h4>
+                                        <p>We have successfully received your response. We will reach you shortly.</p>
+                                        <hr>
+                                        <p class="mb-0">For more information, <a href="javascript:void(0)" routerLink="/contact">Contact Us</a>.</p>
+                                      </div>
+                                     </div>
                             <button type="submit" class="btn " style="color:#cfcfc3;background: #5e5e5e;margin: auto" >Submit</button>
                         </div>
                           </form>
