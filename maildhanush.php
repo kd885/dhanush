@@ -10,7 +10,6 @@ if($_POST){
     $requirements = $_POST['requirements'];
     $message = "The customer has sent the following details: \r\n"
     ."Name : ".$name
-    ."\r\nEmail : ".$email    
     ."\r\nCountry : ".$country
     ."\r\nPhone Number : ".$phone
     ."\r\nAddress : ".$address

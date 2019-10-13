@@ -12,6 +12,7 @@ import { CurtainsComponent } from './curtains/curtains.component';
 import { PillowsComponent } from './pillows/pillows.component';
 import { KitchenLinenComponent } from './kitchen-linen/kitchen-linen.component';
 import { GrassBegsComponent } from './grass-begs/grass-begs.component';
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -25,7 +26,9 @@ const routes: Routes = [
   {path:'curtains', component:CurtainsComponent},
   {path:'pillows', component:PillowsComponent},
   {path:'kitchen-linen', component:KitchenLinenComponent},
-  {path:'grass-begs', component:GrassBegsComponent}
+  {path:'grass-bags', component:GrassBegsComponent},
+  {path:'table', component:TableComponent}
+  
   
 ];
 

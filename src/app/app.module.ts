@@ -18,6 +18,9 @@ import { CurtainsComponent } from './curtains/curtains.component';
 import { PillowsComponent } from './pillows/pillows.component';
 import { KitchenLinenComponent } from './kitchen-linen/kitchen-linen.component';
 import { GrassBegsComponent } from './grass-begs/grass-begs.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,15 @@ import { GrassBegsComponent } from './grass-begs/grass-begs.component';
     CurtainsComponent,
     PillowsComponent,
     KitchenLinenComponent,
-    GrassBegsComponent
+    GrassBegsComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
